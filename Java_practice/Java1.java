@@ -4,6 +4,7 @@ public class Java1 {
 	
 	public static void main(String[] args) {
 		Java1 java1= new Java1();
+		/*
 		java1.sum(30, 50);
 		java1.student("Umesh", 3034, 98);
 		java1.square(30.5f);
@@ -17,7 +18,8 @@ public class Java1 {
 		float inputNumber2= 31.98f;
 		System.out.println("Before swapping Input number1 is: "+inputNumber1 +" and input number2 is: "+inputNumber2);
 		java1.swapNumbersWithVar(inputNumber1, inputNumber2);
-		java1.swapNumbersWithoutVar(inputNumber1, inputNumber2);
+		java1.swapNumbersWithoutVar(inputNumber1, inputNumber2);*/
+		java1.sumOfPrimeNumber(10);
 	}
 	
 	void sum(int input1, int input2){
@@ -79,4 +81,22 @@ public class Java1 {
 		System.out.println("After swapping inputNumber1 is: "+number1 +" and inputNumber2 is: "+number2);
 	}
 	
+	void sumOfPrimeNumber(int number){
+		int sum=0;
+		for(int j=0; j<=number; j++){
+			int count=0;
+			for (int i=2; i<= j/2; i++){
+				if(j %i==0){
+					count++;
+					break;
+				}
+			}
+			if (count==0 && j!=1){
+				System.out.println("Prime number is: "+j);
+				sum=sum+j;	
+			}
+		}
+		System.out.println(sum);
+		
+	}
 }
